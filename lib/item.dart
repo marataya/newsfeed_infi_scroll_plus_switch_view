@@ -30,5 +30,5 @@ class MessageItem implements ListItem {
   }
 
   @override
-  Widget buildSubtitle(BuildContext context) => Text(body);
+  Widget buildSubtitle(BuildContext context) => Column(children: [Text(body, maxLines: 3,),Text('...')]);
 }

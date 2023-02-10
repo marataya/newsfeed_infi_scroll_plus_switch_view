@@ -59,7 +59,7 @@ class _HomePageState extends State<HomePage> {
     List<MessageItem> newData = items.length >= 1000
         ? []
         : List<MessageItem>.generate(20,
-            (index) => MessageItem(Lorem.word(numWords: 4), Lorem.sentence()));
+            (index) => MessageItem(Lorem.word(numWords: 4), Lorem.sentence(numSentences: 5)));
     if (newData.isNotEmpty) {
       items.addAll(newData);
     }
@@ -166,6 +166,7 @@ class _HomePageState extends State<HomePage> {
                           crossAxisCount: 2,
                           crossAxisSpacing: 5.0,
                           mainAxisSpacing: 5.0,
+                          // childAspectRatio: 0.689,
                         ),
                         controller: _scrollController,
                         itemBuilder: (context, index) {
